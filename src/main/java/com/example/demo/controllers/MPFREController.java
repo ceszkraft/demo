@@ -29,7 +29,7 @@ public class MPFREController {
         String uri = "https://wm2.bbmapfre.com.br/ws/bbmCobrancaRegistrada.wsd.provider.RegistroTitutloCobrancaWS/RegistroTitutloCobrancaWSPort";
         RestTemplate restTemplate = new RestTemplate();
         MAPFREModel result = restTemplate.getForObject(uri, MAPFREModel.class);
-        return result;
+        return ResponseEntity.ok(result);
     }
 
 
