@@ -25,7 +25,7 @@ public class MPFREController {
     }
 
     @GetMapping
-    public MAPFREModel fetch(){
+    public ResponseEntity<MAPFREModel> fetch(){
         String uri = "https://wm2.bbmapfre.com.br/ws/bbmCobrancaRegistrada.wsd.provider.RegistroTitutloCobrancaWS/RegistroTitutloCobrancaWSPort";
         RestTemplate restTemplate = new RestTemplate();
         MAPFREModel result = restTemplate.getForObject(uri, MAPFREModel.class);
